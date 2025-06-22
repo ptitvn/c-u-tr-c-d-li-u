@@ -25,6 +25,7 @@ int main() {
     int k;
     printf("nhap hang can tinh tong : ");
     scanf("%d", &k);
+    k--; 
     if(k < 0 || k >= rows) {
         printf("Hang can tinh khong ton tai.\n");
         return 1;
@@ -33,6 +34,6 @@ int main() {
     for(int j = 0; j < cols; j++) {
         sum += array[k][j];
     }
-    printf("Tong cua hang %d la: %d\n", k, sum);
+    printf("Tong cua hang %d la: %d\n", k +1, sum);
     return 0;
 }
