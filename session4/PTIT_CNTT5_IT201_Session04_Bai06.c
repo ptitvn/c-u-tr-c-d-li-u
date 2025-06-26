@@ -6,7 +6,6 @@ int main (){
         char name[50];
         int age;
     };
-    // Nhập thông tin cho 5 sinh viên.
     struct Student students[5];
     for (int i = 0; i < 5; i++) {
         printf("Nhap thong tin sinh vien thu %d:\n", i + 1);
@@ -17,7 +16,6 @@ int main (){
         printf("age: ");
         scanf("%d", &students[i].age);
     }
-    // Tiến hành tìm kiếm sinh viên theo ID.
     int searchId;
     printf("Nhap ID sinh vien can tim: ");
     scanf("%d", &searchId);
