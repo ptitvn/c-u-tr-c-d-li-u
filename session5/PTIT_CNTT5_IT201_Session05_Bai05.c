@@ -2,10 +2,10 @@
 
 int isPalindrome(char str[], int start, int end) {
     if (start >= end) {
-        return 1; // Chuỗi đối xứng
+        return 1;
     }
     if (str[start] != str[end]) {
-        return 0; // Chuỗi không đối xứng
+        return 0; 
     }
     return isPalindrome(str, start + 1, end - 1);
 }

@@ -2,7 +2,7 @@
 
 int sum(int firstNum, int secondNum) {
     if (firstNum > secondNum) {
-        return 0; // Trường hợp dừng đệ quy
+        return 0; 
     }
     return firstNum + sum(firstNum + 1, secondNum); 
 }
