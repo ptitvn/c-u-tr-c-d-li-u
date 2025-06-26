@@ -1,28 +1,35 @@
 #include <stdio.h>
-int main (){
+
+void fibonacci(int n, int arr[], int index) {
+    if (index >= n) {
+        return; 
+    }
+    if (index == 0) {
+        arr[index] = 0; 
+    } else if (index == 1) {
+        arr[index] = 1;
+    } else {
+        arr[index] = arr[index - 1] + arr[index - 2]; 
+    }
+    fibonacci(n, arr, index + 1); 
+}
+int main() {
     int n;
-    printf("Nhap mot so nguyen duong: ");
+    printf("Nhap so luong so Fibonacci can tim: ");
     scanf("%d", &n);
+    
     if (n <= 0) {
-        printf("Khong hop le! \n");
+        printf("So luong phai lon hon 0.\n");
         return 1; 
     }
+    int arr[n]; 
+    fibonacci(n, arr, 0); 
     
-    int fib[n];
-    fib[0] = 0; 
-    if (n > 1) {
-        fib[1] = 1; 
-    }
-    
-    for (int i = 2; i < n; i++) {
-        fib[i] = fib[i - 1] + fib[i - 2]; 
-    }
-    // In ra các số Fibonacci đã tính
-    printf("Cac so Fibonacci dau tien:\n");
+    printf("Cac so Fibonacci dau tien la: ");
     for (int i = 0; i < n; i++) {
-        printf("%d ", fib[i]);
+        printf("%d ", arr[i]); 
     }
-
-
+    printf("\n");
+    
     return 0;
 }

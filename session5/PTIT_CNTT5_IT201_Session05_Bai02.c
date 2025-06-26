@@ -1,21 +1,23 @@
 #include <stdio.h>
-int main(){
-   
-    // Tính tổng từ 1 đến n
+
+int sum(int n) {
+    if (n <= 0) {
+        return 0; 
+    }
+    return n + sum(n - 1); 
+}
+int main() {
     int n;
     printf("Nhap mot so nguyen duong: ");
     scanf("%d", &n);
-    if (n <= 0) {
-        printf(" khong hop le!\n");
+    
+    if (n < 0) {
+        printf("Khong hop le! Vui long nhap mot so nguyen duong.\n");
         return 1; 
     }
-    int sum = 0;
-    for (int i = 1; i <= n; i++) {
-        sum += i;
-    }
-    // In ra kết quả tổng
-    printf(" %d",  sum);
     
-
-    return 0; 
+    int result = sum(n);
+    printf("Tong tu 1 den %d la: %d\n", n, result);
+    
+    return 0;
 }

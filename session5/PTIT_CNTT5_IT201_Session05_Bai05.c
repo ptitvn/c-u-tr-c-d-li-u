@@ -1,29 +1,32 @@
 #include <stdio.h>
-int main (){
- 
+
+int isPalindrome(char str[], int start, int end) {
+    if (start >= end) {
+        return 1; // Chuỗi đối xứng
+    }
+    if (str[start] != str[end]) {
+        return 0; // Chuỗi không đối xứng
+    }
+    return isPalindrome(str, start + 1, end - 1);
+}
+int main() {
     char str[100];
-    printf("Nhap mot chuoi: ");
+    printf("Nhap chuoi: ");
     fgets(str, sizeof(str), stdin);
+    
     // Loại bỏ ký tự newline nếu có
     str[strcspn(str, "\n")] = 0;
-    int len = 0;
-    // Tính độ dài của chuỗi
-    while (str[len] != '\0') {
-        len++;
+    
+    int length = 0;
+    while (str[length] != '\0') {
+        length++;
     }
-    int isPalindrome = 1; 
-    for (int i = 0; i < len / 2; i++) {
-        if (str[i] != str[len - i - 1]) {
-            isPalindrome = 0; 
-            break;
-        }
-    }
-
-    if (isPalindrome) {
-        printf("Palindrome valid.\n");
+    
+    if (isPalindrome(str, 0, length - 1)) {
+        printf("la chuoi doi xung.\n");
     } else {
-        printf("Palindrome invalid.\n");
+        printf(" khong phai la chuoi doi xung.\n");
     }
-
+    
     return 0;
 }
