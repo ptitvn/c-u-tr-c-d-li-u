@@ -18,4 +18,5 @@ int main() {
     printf("So nguyen tu chuoi '%s' la: %d\n", str, result);
     
     return 0;
+
 }
