@@ -37,7 +37,7 @@ int main() {
     scanf("%d", &search);
     
     int result = binarySearch(arr, n, search);
-    
+    // độ phuức tạp thời gian của thuật toán tìm kiếm nhị phân là O(log n)
     if (result != -1) {
         printf("Phan tu vi tri thu: %d\n", result);
     } else {

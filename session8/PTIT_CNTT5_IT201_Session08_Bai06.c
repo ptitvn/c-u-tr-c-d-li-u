@@ -54,7 +54,7 @@ int main() {
     }
 
     mergeSort(arr, 0, n - 1);
-
+    // độ phức tạp của thuật toán sắp xếp trộn là O(n log n)
     printf("Mang sau khi sap xep:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);

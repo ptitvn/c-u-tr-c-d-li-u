@@ -29,7 +29,7 @@ int main() {
     }
     
     insertionSort(arr, n);
-    
+    // độ phức tạp thời gian của thuật toán sắp xếp chèn là O(n^2)
     printf("Mang sau khi sap xep:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);

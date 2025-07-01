@@ -41,7 +41,7 @@ int main() {
     }
     
     quickSort(arr, 0, n - 1);
-    
+    // độ phức tạp của thuật toán sắp xếp nhanh là O(n log n) trong trường hợp trung bình và O(n^2) trong trường hợp xấu nhất
     printf("Mang sau khi sap xep:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);

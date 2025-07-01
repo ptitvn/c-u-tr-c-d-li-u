@@ -35,7 +35,7 @@ int main() {
     printf("\n");
     
     bubbleSort(arr, n);
-    
+    // độ phức tạp thời gian của thuật toán sắp xếp nổi bọt là O(n^2)
     printf("Mang sau khi sap xep:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);

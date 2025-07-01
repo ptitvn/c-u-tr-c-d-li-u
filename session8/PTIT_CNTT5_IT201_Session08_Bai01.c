@@ -31,7 +31,10 @@ int main() {
     
     int result = linearSearch(arr, n, search);
     
+    //Độ phức tạp thời gian của thuật toán tìm kiếm tuyến tính là O(n)
+
     if (result != -1) {
+    
         printf("Vi tri thu: %d\n", result);
     } else {
         printf("Khong ton tai phan tu \n");
