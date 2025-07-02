@@ -1,24 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
-Từ dữ liệu đã tạo từ bài 1, xây dựng thêm hàm thêm mới phần tử vào vị trí bất kỳ
-Yêu cầu người dùng nhập vào giá trị và vị trí muốn thêm
- Thêm phần tử có dữ liệu là giá trị đã nhập vào vị trí muốn thêm trong danh sách liên kết
-Input
 
-Output
-
-1->2->3->4->5->NULL
-
-value: 7
-
-position: 2
-
- 
-
-1->7->2->3->4->5->NULL
-
-*/
 typedef struct Node {
     int data;
     struct Node* next;
@@ -84,30 +66,24 @@ void freeList(Node* head) {
 int main() {
     Node* head = NULL;
 
-    // Tạo danh sách liên kết với 5 phần tử bất kỳ
     for (int i = 1; i <= 5; i++) {
         insertAtPosition(&head, i, i);
     }
 
-    // In danh sách liên kết
     printf("Danh sach lien ket: ");
     printList(head);
 
-    // Nhập giá trị và vị trí muốn thêm
     int value, position;
     printf("Nhap gia tri muon them: ");
     scanf("%d", &value);
     printf("Nhap vi tri muon them (bat dau tu 1): ");
     scanf("%d", &position);
 
-    // Thêm phần tử vào vị trí đã chỉ định
     insertAtPosition(&head, value, position);
 
-    // In danh sách liên kết sau khi thêm
     printf("Danh sach lien ket sau khi them: ");
     printList(head);
 
-    // Giải phóng bộ nhớ
     freeList(head);
 
     return 0;

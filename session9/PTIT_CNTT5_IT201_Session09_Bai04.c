@@ -77,21 +77,17 @@ void freeList(Node* head) {
 int main() {
     Node* head = NULL;
 
-    // Tạo danh sách liên kết với 5 phần tử bất kỳ
     append(&head, 1);
     append(&head, 2);
     append(&head, 3);
     append(&head, 4);
     append(&head, 5);
 
-    // In danh sách liên kết
     printf("Danh sach lien ket: ");
     printList(head);
 
-    // Duyệt và in dữ liệu của từng phần tử
     traverseList(head);
 
-    // Tìm kiếm một giá trị trong danh sách liên kết
     int searchValue = 3;
     if (searchList(head, searchValue)) {
         printf("Gia tri %d ton tai trong danh sach lien ket.\n", searchValue);
@@ -99,11 +95,9 @@ int main() {
         printf("Gia tri %d khong ton tai trong danh sach lien ket.\n", searchValue);
     }
 
-    // Đếm số lượng phần tử trong danh sách liên kết
     int count = countElements(head);
     printf("Danh sach lien ket co %d phan tu.\n", count);
 
-    // Giải phóng bộ nhớ
     freeList(head);
 
     return 0;
