@@ -35,11 +35,11 @@ int searchList(Node* head, int value) {
     Node* current = head;
     while (current != NULL) {
         if (current->data == value) {
-            return 1; // Tìm thấy giá trị
+            return 1; 
         }
         current = current->next;
     }
-    return 0; // Không tìm thấy giá trị
+    return 0; 
 }
 // Hàm đếm số lượng phần tử trong danh sách liên kết
 int countElements(Node* head) {
