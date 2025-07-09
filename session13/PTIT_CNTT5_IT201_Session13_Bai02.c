@@ -38,7 +38,7 @@ int main() {
     printf("Nhap cac phan tu:\n");
     for (int i = 0; i < MAX; i++) {
         int x;
-        
+        printf("phan tu %d: ",i+1);
         scanf("%d", &x);
         push(&s, x);
     }

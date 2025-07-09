@@ -52,7 +52,6 @@ int calcPostfix(char expr[]) {
     }
     return pop(&s);
 }
-
 int main() {
     char expr[MAX];
     printf("Nhap bieu thuc hau to: ");
